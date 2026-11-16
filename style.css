@@ -1,0 +1,25 @@
+.container {
+    width: 500px;
+    color: rgb(67, 175, 67);
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 10px 5px 20px rgb(67, 175, 67);
+    text-align: center;
+    padding-top: 10px;
+}
+body{
+    background-color: gray;
+}
+.choice{
+    width: 100px;
+}
+#rock{
+    border: 3px solid red;
+}
+#player-score, #computer-score{
+    font-size: 20px;
+    color:red;
+    text-shadow: 4px 2px 7px red;
+    font-weight: bold;
+}
