@@ -8,6 +8,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="login" id="login">
+            <input type="text" id="username" class="username" placeholder="Add meg a neved"> <br>
+            <input type="email" id="email" class="email" placeholder="Add meg az email címed"> <br>
+            <button class="loginButton" onclick="login()">Belépés</button>
+            <p id="approved" class="approved"></p>
+        </div>
         <h1>Kő - Papír - Olló</h1>
         <h2>Válassz!</h2>
         <div class="choices">
@@ -17,12 +23,12 @@
         </div>
         <h2>Gép választása</h2>
         <div class="computer-choice">
-            <img src="" id="computerChoiceImg" class="choice">
+            <img id="computerChoiceImg" class="choice" alt="computer-choice">
         </div>
         <h1 id="result"></h1>
-        <h3>Te pontod</h3>
+        <h2>Te pontod</h2>
         <p id="player-score">0</p>
-        <h3>Gép pontja</h3>
+        <h2>Gép pontja</h2>
         <p id="computer-score">0</p>
 
         <button id="reset" class="resetButton" onclick="resetGame()">Új játék</button>

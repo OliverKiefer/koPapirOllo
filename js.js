@@ -1,8 +1,24 @@
 let playerScore = 0;
 let computerScore = 0;
+const usernamePattern=/^[a-zA-Z][a-zA-Z0-9_]{7,19}$/;
+const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let userName="";
 
+function login() {
+    let username=document.getElementById("username").value.trim();
+    let email=document.getElementById("email").value.trim();
+    if(username.match(usernamePattern) && email.match(emailPattern)) {
+        userName = username;
+        document.getElementById("approved").innerText = "Sikeres bejelentkezés! Üdv, " + userName;
+        document.getElementById("login").style.display="none"
+    }
+    else {
+        document.getElementById("approved").innerText = "Hibás felhasználónév vagy email cím!";
+    }
+}
 function jatek(playerChoice) {
     if (playerScore < 10 && computerScore < 10) {
+        if(userName)
         if (playerChoice == "ko") {
             let rockChoosen = document.getElementById("rock")
             let paperChoosen = document.getElementById("paper")
@@ -65,7 +81,7 @@ function jatek(playerChoice) {
     }
     else if(playerScore==10){
         let finalWinner=document.getElementById("final")
-        finalWinner.innerText="Te nyertél, játékos"
+        finalWinner.innerText=`Nyertél, ${userName}!`
     }
     else if(computerScore==10){
         let finalWinner=document.getElementById("final")
